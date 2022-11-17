@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(./imgs/blurcolor@2x.png) no-repeat no-repeat;
+            background-size: cover;
+        }
+
+        .header-banner {
+            width: 100%;
+        }
+
+        .header h2 {
+            height: 1.1rem;
+            text-align: center;
+            line-height: 1.1rem;
+            font-size: 0.37rem;
+        }
+
+        .content {
+            padding-bottom: 2rem;
+        }
+
+        .content .content-nav {
+            padding: 0.48rem;
+        }
+
+        .content .content-nav .item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content .content-nav .item+.item {
+            margin-top: 0.48rem;
+        }
+
+        .content .content-nav .item .unit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content .content-nav .item .unit img {
+            width: 1.12rem;
+            height: 1.12rem;
+        }
+
+        .content .content-nav .item span {
+            margin-top: 0.2rem;
+            color: rgba(0, 0, 0, 0.65);
+            text-align: center;
+            font-size: 0.28rem;
+            font-weight: 400;
+        }
+
+        .content .content-goods {
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+
+        .content .content-goods .item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content .content-goods .item .unit:first-child {
+            margin-bottom: 0.22rem;
+        }
+
+        .content .content-goods .item .unit {
+            width: 3.24rem;
+            height: 4.32rem;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: 0.16rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.24rem;
+        }
+
+        .content .content-goods .item .unit img {
+            width: 2.76rem;
+            height: 2.76rem;
+            display: block;
+        }
+
+        .content .content-goods .item .unit p:first-of-type {
+            margin-top: 0.24rem;
+            color: rgba(0, 0, 0, 0.85);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .content .content-goods .item .unit p:last-of-type {
+            margin-top: 0.12rem;
+            color: #3642FF;
+        }
+
+        .content .content-goods .item .unit p {
+            font-size: 0.28rem;
+        }
+
+        .footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            height: 1rem;
+            background: #FFFFFF;
+            box-shadow: 0px -1px 8px 0px rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer div {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .footer div p {
+            text-align: center;
+            font-size: 0.24rem;
+            color: #000000;
+        }
+
+        .footer div img {
+            width: 0.48rem;
+            height: 0.48rem;
+        }
+
+        .footer div.active p {
+            color: #3642FF;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>信用卡积分兑换商城</h2>
+        <img class="header-banner" src="./imgs/banner@2x.png">
+    </header>
+    <main class="content">
+        <div class="content-nav">
+            <div class="item">
+                <div class="unit">
+                    <img src="./imgs/编组@2x.png">
+                    <span>本卡专区</span>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/编组@2x(2).png">
+                    <span>汽车用品</span>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/编组@2x(4).png">
+                    <span>潮流数码</span>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/编组@2x(6).png">
+                    <span>户外运动</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="unit">
+                    <img src="./imgs/编组@2x(1).png">
+                    <span>箱包饰品</span>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/编组@2x(3).png">
+                    <span>摄影器材</span>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/编组@2x(5).png">
+                    <span>电子礼券</span>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/编组@2x(7).png">
+                    <span>全部商品</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-goods">
+            <div class="item">
+                <div class="unit">
+                    <img src="./imgs/商品／单品-图片1@2x.png">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p>50积分</p>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/商品／单品-图片1@2x(2).png">
+                    <p>Galaxy Note20系列</p>
+                    <p>10000积分</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="unit">
+                    <img src="./imgs/商品／单品-图片1@2x(1).png">
+                    <p>Galaxy Note10系列</p>
+                    <p>80积分</p>
+                </div>
+                <div class="unit">
+                    <img src="./imgs/商品／单品-图片1@2x(3).png">
+                    <p>Galaxy Note20系列</p>
+                    <p>50积分</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="active">
+            <img src="./imgs/Icon ／ ic_home@2x.png">
+            <p>首页</p>
+        </div>
+        <div>
+            <img src="./imgs/Icon-other@2x.png">
+            <p>分类</p>
+        </div>
+        <div>
+            <img src="./imgs/Icon-other@2x(1).png">
+            <p>订单</p>
+        </div>
+        <div>
+            <img src="./imgs/Icon-other@2x(2).png">
+            <p>我的</p>
+        </div>
+    </footer>
+</body>
+
+</html>
