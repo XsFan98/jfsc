@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:100px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-size: cover;
+        }
+
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            height: 1rem;
+            background: #FFFFFF;
+        }
+
+        .header h2 {
+            height: .55rem;
+            text-align: center;
+            line-height: .55rem;
+            font-size: .185rem;
+        }
+
+        .header .title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header .div {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .header .title p {
+            margin: .11rem .15rem;
+            text-align: center;
+            font-size: .14rem;
+            color: #000000;
+        }
+
+        .header .title .active {
+            border-bottom: solid .03rem #3642FF;
+        }
+
+        .content {
+            padding-top: 1rem;
+            background-color: rgb(247, 248, 255);
+            padding-bottom: .1563rem;
+            
+        }
+
+        .content .box {
+            background-color: rgb(247, 248, 255);
+        }
+        .content .box .item{
+            margin: .1563rem;
+            height: 1rem;
+            justify-content: space-between;
+            display: flex;
+            padding: .1563rem;
+            font-size: .14rem;
+            background-color: #FFFFFF;
+            
+        }
+        .content .box .item .picture .img{
+            padding-right: .1563rem;
+            width: .9rem;
+            height: .9rem;
+        }
+        .content .box .item .itemName{
+            width: 1.6rem;
+            padding-top: .27rem;
+        }
+        .content .box .item .itemName .scored{
+            color: rgb(54, 67, 254)
+            
+        }
+        .content .box .item .state{
+            width: .5rem;
+            padding-top: .37rem;
+        }
+        .content .box .item .state .pay{
+            padding: .02rem;
+            color:rgb(255, 99, 100);
+            background-color: rgb(255, 240, 238);
+            border:solid .01rem rgb(255, 99, 100);
+        }
+        .content .box .item .state .sended{
+            padding: .02rem;
+            color:rgb(103, 205, 51);
+            background-color: rgb(247, 255, 239);
+            border:solid .01rem rgb(103, 205, 51);
+        }
+        .content .box .item .state .after{
+            padding: .02rem;
+            color:rgb(252, 184, 43);
+            background-color: rgb(255, 251, 231);
+            border:solid .01rem rgb(252, 184, 43);
+        }
+        .content .box .item .state .waited{
+            padding: .02rem;
+            color:rgb(111, 110, 110);
+            background-color: rgb(246, 246, 246);
+            border:solid .01rem rgb(111, 110, 110);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>我的订单</h2>
+        <div class="title">
+            <div class="active">
+                <p>全部</p>
+            </div>
+            <div class="unit">
+                <p>待付款</p>
+            </div>
+            <div class="unit">
+                <p>待发货</p>
+            </div>
+            <div class="unit">
+                <p>已完成</p>
+            </div>
+            <div class="unit">
+                <p>退款/售后</p>
+            </div>
+        </div>
+
+    </header>
+    <main class="content">
+        <div class="box">
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/back20.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="pay">待付款</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/phone.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Note20系列手机</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="sended">已发货</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/back20.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="waited">待发货</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/back20.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="after">售后中</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/back20.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="waited">待发货</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/back20.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="waited">待发货</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="picture">
+                    <img src="./imgs/back20.png" class="img">
+                </div>
+                <div class="itemName">
+                    <p>Galaxy Z系列 5折券</p>
+                    <p class="scored">50积分</p>
+                </div>
+                <div class="state">
+                    <p class="waited">待发货</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>
