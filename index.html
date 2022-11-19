@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size:50px;">
+<html lang="en" style="font-size:100px;">
 
 <head>
     <meta charset="UTF-8">
@@ -144,7 +144,41 @@
         .footer div.active p {
             color: #3642FF;
         }
+
+        
+
+        @media screen and(-webkit-min-device-pixel-ratio：2),
+        screen and (min--moz-device-pixel-ratio: 2) {
+            .content .content-goods .item .unit {
+                border: 0.5px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        @media screen and(-webkit-min-device-pixel-ratio: 3),
+        screen and (min--moz-device-pixel-ratio: 3) {
+            .content .content-goods .item .unit {
+                border: 0.3333px solid rgba(0, 0, 0, 0.1);
+            }
+        }
     </style>
+    <script>
+        (function (doc, win) {
+            const docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    let clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 如果小于320不在缩小
+                    clientWidth = clientWidth < 320 ? 320 : clientWidth
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window)
+    </script>
+
 </head>
 
 <body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size:100px;">
+<html lang="en" style="font-size:50px;">
 
 <head>
     <meta charset="UTF-8">
@@ -20,20 +20,22 @@
             width: 100%;
             position: fixed;
             top: 0;
-            height: 1rem;
+            height: 2rem;
             background: #FFFFFF;
         }
 
         .header h2 {
-            height: .55rem;
+            height: 1.1rem;
             text-align: center;
-            line-height: .55rem;
-            font-size: .185rem;
+            line-height: 1.1rem;
+            font-size: .37rem;
         }
 
         .header .title {
+            line-height: .9rem;
+            height: .9rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
         .header .div {
@@ -44,20 +46,21 @@
         }
 
         .header .title p {
-            margin: .11rem .15rem;
+            padding-left: .28rem;
+            padding-right: .28rem;
             text-align: center;
-            font-size: .14rem;
+            font-size: .28rem;
             color: #000000;
         }
 
         .header .title .active {
-            border-bottom: solid .03rem #3642FF;
+            border-bottom: solid .06rem #3642FF;
         }
 
         .content {
-            padding-top: 1rem;
+            padding-top:  2rem;
             background-color: rgb(247, 248, 255);
-            padding-bottom: .1563rem;
+            padding-bottom: .16rem;
 
         }
 
@@ -66,64 +69,99 @@
         }
 
         .content .box .item {
-            margin: .1563rem;
-            height: 1rem;
+            margin: .32rem;
+            height: 1.8rem;
             justify-content: space-between;
             display: flex;
-            padding: .1563rem;
-            font-size: .14rem;
+            padding: .2rem;
+            
             background-color: #FFFFFF;
 
         }
-
         .content .box .item .picture .img {
-            padding-right: .1563rem;
-            width: .9rem;
-            height: .9rem;
+            /* padding-right: 7.815px; */
+            width: 1.8rem;
+            height: 1.8rem;
         }
+
 
         .content .box .item .itemName {
-            width: 1.6rem;
-            padding-top: .27rem;
+            width: 3.4rem;
+            padding-top: .52rem;
         }
-
+        .content .box .item .itemName .name{
+            font-size: .3rem;
+        }
         .content .box .item .itemName .scored {
+            font-size: .28rem;
             color: rgb(54, 67, 254)
         }
 
         .content .box .item .state {
-            width: .5rem;
-            padding-top: .37rem;
+            font-size: .26rem;
+            width: 1rem;
+            padding-top: .62rem;
         }
 
         .content .box .item .state .pay {
-            padding: .02rem;
+            padding: .04rem;
             color: rgb(255, 99, 100);
             background-color: rgb(255, 240, 238);
-            border: solid .01rem rgb(255, 99, 100);
+            border: solid .04rem rgb(255, 99, 100);
         }
 
         .content .box .item .state .sended {
-            padding: .02rem;
+            padding: .06rem;
             color: rgb(103, 205, 51);
             background-color: rgb(247, 255, 239);
-            border: solid .01rem rgb(103, 205, 51);
+            border: solid .04rem rgb(103, 205, 51);
         }
 
         .content .box .item .state .after {
-            padding: .02rem;
+            padding: .06rem;
             color: rgb(252, 184, 43);
             background-color: rgb(255, 251, 231);
-            border: solid .01rem rgb(252, 184, 43);
+            border: solid .04rem rgb(252, 184, 43);
         }
 
         .content .box .item .state .waited {
-            padding: .02rem;
+            padding: .06rem;
             color: rgb(111, 110, 110);
             background-color: rgb(246, 246, 246);
-            border: solid .01rem rgb(111, 110, 110);
+            border: solid .04rem rgb(111, 110, 110);
         }
+
+        /* @media screen and(-webkit-min-device-pixel-ratio：2),
+        screen and (min--moz-device-pixel-ratio: 2) {
+            .content .box .item  .picture{
+                border: .01rem solid rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        @media screen and(-webkit-min-device-pixel-ratio: 3),
+        screen and (min--moz-device-pixel-ratio: 3) {
+            .content .box .item .picture{
+                border: .0067rem solid rgba(0, 0, 0, 0.1);
+            }
+        } */
     </style>
+    <script>
+        (function (doc, win) {
+            const docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    let clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 如果小于320不在缩小
+                    clientWidth = clientWidth < 320 ? 320 : clientWidth
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window)
+    </script>
 </head>
 
 <body>
@@ -152,10 +190,10 @@
         <div class="box">
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/back20.png" class="img">
+                    <img src="./imgs/back20@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Z系列 5折券</p>
+                    <p class="name">Galaxy Z系列 5折券</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
@@ -164,10 +202,10 @@
             </div>
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/phone.png" class="img">
+                    <img src="./imgs/phone@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Note20系列手机</p>
+                    <p class="name">Galaxy Note20系列手机</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
@@ -176,10 +214,10 @@
             </div>
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/back20.png" class="img">
+                    <img src="./imgs/back20@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Z系列 5折券</p>
+                    <p class="name">Galaxy Z系列 5折券</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
@@ -188,10 +226,10 @@
             </div>
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/back20.png" class="img">
+                    <img src="./imgs/back20@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Z系列 5折券</p>
+                    <p class="name">Galaxy Z系列 5折券</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
@@ -200,10 +238,10 @@
             </div>
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/back20.png" class="img">
+                    <img src="./imgs/back20@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Z系列 5折券</p>
+                    <p class="name">Galaxy Z系列 5折券</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
@@ -212,10 +250,10 @@
             </div>
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/back20.png" class="img">
+                    <img src="./imgs/back20@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Z系列 5折券</p>
+                    <p class="name">Galaxy Z系列 5折券</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
@@ -224,10 +262,10 @@
             </div>
             <div class="item">
                 <div class="picture">
-                    <img src="./imgs/back20.png" class="img">
+                    <img src="./imgs/back20@2x.png" class="img">
                 </div>
                 <div class="itemName">
-                    <p>Galaxy Z系列 5折券</p>
+                    <p class="name">Galaxy Z系列 5折券</p>
                     <p class="scored">50积分</p>
                 </div>
                 <div class="state">
